@@ -1,0 +1,177 @@
+from selenium import webdriver
+import pandas as pd
+import numpy as np
+from time import time, sleep
+import time
+from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
+import os
+import datetime
+from selenium.common.exceptions import NoSuchElementException
+import colorama
+from colorama import Fore
+from pynput.keyboard import Key, Controller
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+
+
+
+
+
+s=Service(r"C:\crawler\chromedriver.exe")
+driver = webdriver.Chrome(service=s)
+# url='https://www.google.com'
+# browser.get(url)
+
+# driver = webdriver.Chrome(executable_path=r"C:\crawler\chromedriver.exe")
+driver.get(r"http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
+sleep(5)
+remove_fastwive = driver.find_element(By.CSS_SELECTOR ,"#SettingsDesc > div:nth-child(1) > a.TopIcon.MwIcon.MwPreview")
+remove_fastwive.click()
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+# total_symbol = driver.find_element_by_css_selector("#ModalWindowInner1 > div.box3 > div:nth-child(6)")
+# total_symbol.click()
+
+# tanzimat = driver.find_element_by_css_selector("#id1")
+# tanzimat.click()
+
+group_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner1 > div.box3 > div:nth-child(17)")
+group_no.click()
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+simple_digit = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner2 > div.box3 > div:nth-child(27)")
+simple_digit.click()
+
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+hugugi_data =driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner3 > div.box3 > div:nth-child(44)")
+hugugi_data.click()
+
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+amar_data = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner4 > div.box3 > div:nth-child(45)")
+amar_data.click()
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+history = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner5 > div.box3 > div:nth-child(46)")
+history.click()
+
+tanzimat = driver.find_element(By.CSS_SELECTOR ,"#id1")
+tanzimat.click()
+
+farabours = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner6 > div.box3 > div:nth-child(33)")
+farabours.click()
+
+
+
+tashilat_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner7 > div.box3 > div:nth-child(34)")
+tashilat_no.click()
+
+tagadom_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner8 > div.box3 > div:nth-child(35)")
+tagadom_no.click()
+
+orag_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner9 > div.box3 > div:nth-child(36)")
+orag_no.click()
+
+ekhtiar_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner10 > div.box3 > div:nth-child(37)")
+ekhtiar_no.click()
+
+ati_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner11 > div.box3 > div:nth-child(38)")
+ati_no.click()
+
+found_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner12 > div.box3 > div:nth-child(39)")
+found_no.click()
+
+kala_no = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner13 > div.box3 > div:nth-child(40)")
+kala_no.click()
+
+close_seting = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowOuter14 > div.popup_close")
+close_seting.click()
+
+
+filter_open = driver.find_element(By.CSS_SELECTOR ,"#SettingsDesc > div:nth-child(1) > a.TopIcon.MwIcon.MwQuery")
+filter_open.click()
+
+
+filter_code = driver.find_element(By.CSS_SELECTOR ,"#FilterIndex > div.awesome.black")
+filter_code.click()
+
+
+filter0 = driver.find_element(By.CSS_SELECTOR ,"#FilterIndex > div:nth-child(1)")
+filter0.click()
+
+
+filter_text = driver.find_element(By.CSS_SELECTOR ,"#InputFilterCode")
+filter_text.send_keys("(cfield0)=(l18) + '#' + (pf) + '#' + (pl) + '#' + (pmin) + '#' + (pmax) + '#' + (pc) + '#' + (tval) + '#' + (tvol) + '#' + (ct).Buy_CountI + '#' + (ct).Buy_I_Volume + '#' + (ct).Sell_CountI + '#' + (ct).Sell_I_Volume + '#' + (ct).Buy_CountN + '#' + (ct).Buy_N_Volume + '#' + (ct).Sell_CountN + '#' + (ct).Sell_N_Volume + '#' + (z) + '#' + (cs) + '#' + (py) + '#' + (plp) + '#' + (pcp) + '#' + (tmin) + '#' + (tmax)  + '#' +  (zd1) + '#' + (pd1) + '#' + (qd1) + '#' + (zo1) + '#' + (po1) + '#' + (qo1) + '#' +  (zd2) + '#' + (pd2) + '#' + (qd2) + '#' + (zo2) + '#' + (po2) + '#' + (qo2) + '#' +  (zd3) + '#' + (pd3) + '#' + (qd3) + '#' + (zo3) + '#' + (po3) + '#' + (qo3) + '#' + (bvol)")
+
+filter_accept = driver.find_element(By.CSS_SELECTOR ,"#FilterContent > div.awesome.blue")
+filter_accept.click()
+sleep(5)
+
+
+driver.get(r"http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
+
+sleep(8)
+form_open = driver.find_element(By.CSS_SELECTOR ,"#SettingsDesc > div:nth-child(1) > a.TopIcon.MwIcon.MwTemplate")
+form_open.click()
+
+
+self_form = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner1 > div:nth-child(13)")
+self_form.click()
+
+
+count_calumn = driver.find_element(By.CSS_SELECTOR ,"#TemplateColNo")
+count_calumn.clear()
+count_calumn.send_keys("1")
+
+
+name_calumn = driver.find_element(By.CSS_SELECTOR ,"#Col0_Title")
+name_calumn.send_keys("symbol")
+
+
+cfield0_select = driver.find_element(By.CSS_SELECTOR ,"#Col0_Data > option:nth-child(25)")
+cfield0_select.click()
+
+
+
+rast_chin = driver.find_element(By.CSS_SELECTOR ,"#Col0_Align > option:nth-child(3)")
+rast_chin.click()
+
+
+width_calumn = driver.find_element(By.CSS_SELECTOR ,"#Col0_Width")
+width_calumn.clear()
+width_calumn.send_keys("6000")
+
+
+form_save = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner2 > a")
+form_save.click()
+
+
+form_open = driver.find_element(By.CSS_SELECTOR ,"#SettingsDesc > div:nth-child(1) > a.TopIcon.MwIcon.MwTemplate")
+form_open.click()
+
+self_form_active = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowInner3 > div:nth-child(12)")
+self_form_active.click()
+
+
+form_close = driver.find_element(By.CSS_SELECTOR ,"#ModalWindowOuter3 > div.popup_close")
+form_close.click()
+
+
+## اتمام تنضیمات
+
+
+
